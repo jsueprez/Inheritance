@@ -10,6 +10,7 @@ Create 2 classes:
     Q1. What type of Inheritance are you using?
         Multiple Inheritance
     Q2. Which mode of Inheritance are you using?
+        SimpleCalculator and ScientificCalculator
     Q3. Create an object of HybridCalculator and display results of the simple and scientific calculator.
     Q4. How is code reusability implemented?
 */
