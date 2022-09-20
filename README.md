@@ -1,29 +1,28 @@
-# Inheritance
+*# Inheritance
 
 This project is shows off concepts about one fundamental principle of the OOP, the inheritance.
 ## Table of Contents
 
-- [Inheritance](#inheritance)
-  - [Table of Contents](#table-of-contents)
-  - [About the Project](#about-the-project)
-  - [Project Status](#project-status)
-  - [Getting Started](#getting-started)
-    - [Dependencies](#dependencies)
-    - [Getting the Source](#getting-the-source)
-    - [Building](#building)
-    - [Running Tests](#running-tests)
-      - [Other Tests](#other-tests)
-    - [Installation](#installation)
-    - [Usage](#usage)
-  - [Release Process](#release-process)
-    - [Versioning](#versioning)
-    - [Payload](#payload)
-  - [How to Get Help](#how-to-get-help)
-  - [Contributing](#contributing)
-  - [Further Reading](#further-reading)
-  - [License](#license)
-  - [Authors](#authors)
-  - [Acknowledgments](#acknowledgments)
+- [Table of Contents](#table-of-contents)
+- [About the Project](#about-the-project)
+- [Project Status](#project-status)
+- [Getting Started](#getting-started)
+  - [Dependencies](#dependencies)
+  - [Getting the Source](#getting-the-source)
+  - [Building](#building)
+  - [Running Tests](#running-tests)
+    - [Other Tests](#other-tests)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Release Process](#release-process)
+  - [Versioning](#versioning)
+  - [Payload](#payload)
+- [How to Get Help](#how-to-get-help)
+- [Contributing](#contributing)
+- [Further Reading](#further-reading)
+- [License](#license)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
 ## About the Project
 
@@ -37,21 +36,40 @@ There are different types of inheritance in C++
 
     Single Inheritance
 A derived class is inherited with only one base class.
-```
+``` C++
+#include <iostream>
+#include <string>
+using std::cout;
+using std::endl;
+using std::string;
+
 class Employee
 {
-  private:
-    int age;
-    string name;
-    ...
   public:
-    int get_age();
-    ...  
+    int id;
+    float salary;
+    Employee(int input_id)
+    {
+        id = input_id;
+        salary = 600;
+    }
+    Employee() {} 
 };
 
 class Programmer : public Employee  // use the colon ":" to indicate inheritance
 {
-  
+  // List only additional member variables and functions, no need to repeat things
+  // that were inherited from the base class, only things that you are adding or overriding.
+  public:
+    string languageCode;
+    Programmer(int input_id) : Employee(input_id)
+    {
+      languageCode = "C++";
+    }
+    void print_id()
+    {
+      cout << id << endl;
+    }
 };
 ```
     Multiple Inheritance
@@ -204,4 +222,4 @@ Related
 
 Your Project is Great, So Let’s Make Your README Great Too
 
-Get Others Involved in Your Project with a CONTRIBUTING Guide
+Get Others Involved in Your Project with a CONTRIBUTING Guide*
