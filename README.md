@@ -37,11 +37,12 @@ This project is shows off concepts about one fundamental principle of the OOP, t
   * ACCESS MODIFIER
 * Base classes can be inherited by derived classes using 3 types of vissibility,  ```private ```, ``` public ``` and ``` protected ```.
 * By default, if you don't specify the vissibility  after the ``` : ``` the base class is inherited in private mode.
- |                   | Public Derivation | Private Derivation | Protected Derivation |
- | ----------------- | ----------------- | :----------------: | :------------------: |
- | Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
- | Protected members | Protected         |      Private       |      Protected       |
- | Public members    | Public            |      Private       |      Protected       |
+
+|                   | Public Derivation | Private Derivation | Protected Derivation |
+| ----------------- | ----------------- | :----------------: | :------------------: |
+| Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
+| Protected members | Protected         |      Private       |      Protected       |
+| Public members    | Public            |      Private       |      Protected       |
 
 * Public Visibility Mode ``` public ```: Public members of the base class becomes Public members of the derived class
 * Private Visibility Mode ```private ```: Public members of the base class become private members of the derived class
