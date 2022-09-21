@@ -3,26 +3,44 @@
 class baseClass
 {
 private:
-    int iAmPrivateMember;
-    int countPrivate();
+    int x;
+
 protected:
-    int iAmProtectedMember;
-    int countProtected();
+    int y;
+
 public:
-    int iAmPublicMember;
-    int countPublic();
+    int z;
+    void print_rules()
+    {
+        std::cout << "None of the derived classes can access anything that is private in the baseClass." << std::endl;
+    }
 };
 
 class derivingPublicModeClass : public baseClass
 {
+public:
+    void print_rules()
+    {
+        std::cout << "In derivingPublicModeClass, the public part of the baseClass is public, the protected part of the baseClass is protected, we say derivingPublicModeClass is-a-kind-of-a classBase. " << std::endl;
+    }
 };
 
 class derivingPrivateModeClass : private baseClass
 {
+public:
+    void print_rules()
+    {
+        std::cout << "In derivingPrivateModeClass, the public part and the protected part of the baseClass are private. " << std::endl;
+    }
 };
 
 class derivingProtectedMode : protected baseClass
 {
+public:
+    void print_rules()
+    {
+        std::cout << "In derivingProtectedMode, the public part and the protected part of the baseClass are protected. " << std::endl;
+    }
 };
 
 int main()
@@ -32,10 +50,17 @@ int main()
     derivingPrivateModeClass privateMode;
     derivingProtectedMode protectedMode;
 
-    bClass.iAmPublicMember = 1 ; // The only member accesible from outside of the class is the public member
+    bClass.print_rules();
+    bClass.z = 3;
+    std::cout << "Only 'z' can be accesed by the bClass, z=" << bClass.z << std::endl;
 
-    // privateMode. Protected and public member are only accesible within the class.
+    publicMode.print_rules();
+    publicMode.z = 5;
+    std::cout << publicMode.z << std::endl;
 
-    protectedMode.
+    privateMode.print_rules();
+    // privateMode.z = 10; --> private member inaccesible
 
+    protectedMode.print_rules();
+    // protectedMode.z = 10; --> private member inaccesible
 }
