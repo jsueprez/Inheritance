@@ -1,6 +1,6 @@
 # Inheritance
 
-This project is shows off concepts about one fundamental principle of the OOP, the inheritance.
+This project shows off concepts about one fundamental principle of the OOP, the inheritance.
 ## Table of Contents
 
 - [Inheritance](#inheritance)
@@ -37,17 +37,19 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 * The new class which is inherited from the base class is called a derived class
 * In the derived class you should list only additional member variables and functions, no need to repeat things from base class, only things that you are adding or overriding.
 ### ACCESS MODIFIER
-* Base classes can be inherited by derived classes using 3 types of vissibility,  ```private ```, ``` public ``` and ``` protected ```.
-* By default, if you don't specify the vissibility  after the ``` : ``` the base class is inherited in private mode.
+* Base classes can be inherited by derived classes using 3 types of visibility,  ```private ```, ``` public ``` and ``` protected ```.
+* By default, if you don't specify the visibility after the ``` : ```, the base class is inherited in private mode.
 
 |                   | Public Derivation | Private Derivation | Protected Derivation |
 | ----------------- | ----------------- | :----------------: | :------------------: |
 | Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
-| Protected members | Protected✅        |      Private⛔️      |      Protected✅      |
-| Public members    | Public            |      Private⛔️      |      Protected✅      |
+| Protected members | Protected         |      Private       |      Protected       |
+| Public members    | Public            |      Private       |      Protected       |
 
-NOTE: ✅ Can only be accessed within the derived class.
-      ⛔️ Can NOT be accessed neither in the derived class nor outside of the class.
+NOTE: 
+    A member (either data member or member function) declared in a ```private``` section of a class can only be accessed by member functions and friends of that class
+    A member (either data member or member function) declared in a ```protected``` section of a class can only be accessed by member functions and friends of that class, and by member functions and friends of derived classes
+    A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone
 
 ### CONSTRUCTOR & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
