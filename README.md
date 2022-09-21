@@ -45,6 +45,7 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 | Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
 | Protected members | Protected✅        |      Private⛔️      |      Protected✅      |
 | Public members    | Public✅           |      Private⛔️      |      Protected✅      |
+
 NOTE: ✅ Can be accessed in the derived class
       ⛔️ Can NOT be accessed in the derived class
 
