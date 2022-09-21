@@ -10,6 +10,7 @@ This project shows off concepts about one fundamental principle of the OOP, the 
     - [ACCESS MODIFIER](#access-modifier)
     - [CONSTRUCTOR & DESTRUCTOR](#constructor--destructor)
     - [SPECIAL SYNTAX](#special-syntax)
+      - [Single Inheritance](#single-inheritance)
   - [Contributing](#contributing)
   - [Further Reading](#further-reading)
   - [License](#license)
@@ -57,7 +58,7 @@ NOTE:
 
 There are different types of inheritance in C++
 
-    Single Inheritance
+#### Single Inheritance
 A derived class is inherited with only one base class.
 
 Key Takeaways:
