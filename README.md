@@ -47,9 +47,9 @@ This project shows off concepts about one fundamental principle of the OOP, the 
 | Public members    | Public            |      Private       |      Protected       |
 
 NOTE: 
-  A member (either data member or member function) declared in a ```private``` section of a class can only be accessed by member functions and friends of that class.
-  A member (either data member or member function) declared in a ```protected``` section of a class can only be accessed by member functions and friends of that class, and by member functions and friends of derived classes
-  A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone
+* A member (either data member or member function) declared in a ```private``` section of a class can only be accessed by member functions and friends of that class.
+* A member (either data member or member function) declared in a ```protected``` section of a class can only be accessed by member functions and friends of that class, and by member functions and friends of derived classes
+* A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone
 
 ### CONSTRUCTOR & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
