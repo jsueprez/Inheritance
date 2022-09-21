@@ -6,6 +6,10 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 - [Inheritance](#inheritance)
   - [Table of Contents](#table-of-contents)
   - [About the Project](#about-the-project)
+    - [INHERITANCE](#inheritance-1)
+    - [ACCESS MODIFIER](#access-modifier)
+    - [CONSTRUCTORS & DESTRUCTOR](#constructors--destructor)
+    - [SPECIAL SYNTAX](#special-syntax)
   - [Project Status](#project-status)
   - [Getting Started](#getting-started)
     - [Dependencies](#dependencies)
@@ -26,15 +30,13 @@ This project is shows off concepts about one fundamental principle of the OOP, t
   - [Acknowledgments](#acknowledgments)
 
 ## About the Project
-
-
-  * INHERITANCE
+### INHERITANCE
 * Inheritance is the capability of class to derive characteristics or properties from another class.
 * The concept of reusability in C++ is supported using inheritance
 * We can reuse the properties of an existing class by inheriting it
 * The new class which is inherited from the base class is called a derived class
 * In the derived class you should list only additional member variables and functions, no need to repeat things from base class, only things that you are adding or overriding.
-  * ACCESS MODIFIER
+### ACCESS MODIFIER
 * Base classes can be inherited by derived classes using 3 types of vissibility,  ```private ```, ``` public ``` and ``` protected ```.
 * By default, if you don't specify the vissibility  after the ``` : ``` the base class is inherited in private mode.
 
@@ -47,14 +49,13 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 * Public Visibility Mode ``` public ```: Public members of the base class becomes Public members of the derived class
 * Private Visibility Mode ```private ```: Public members of the base class become private members of the derived class
 * Private members are never inherited
-
-  * CONSTRUCTORS & DESTRUCTOR
+### CONSTRUCTORS & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
 * If there are one or more arguments in the base class constructor, derived class need to pass argument to the base class constructor
 * Use the colon ":" after the name class declaration to indicate inheritance.
 * If both base and derived classes have constructors, base class constructor is executed first. The opposite happens with the destructor, they are called from inner to outer.
 * In multiple inheritance, base classes are constructed in the order in which they appear in the class deceleration. For example if there are three classes “A”, “B”, and “C”, and the class “C” is inheriting classes “A” and “B”,then the constructor of class “A” will be executed first. But if the class “B” is written before class “A” then the constructor of class “B” will be executed first.
-  * SPECIAL SYNTAX
+### SPECIAL SYNTAX
 * C++ supports a special syntax for passing arguments to multiple base classes
 * The constructor of the derived class receives all the arguments at once and then will pass the call to the respective base classes
 * The body is called after the constructors is finished executing
