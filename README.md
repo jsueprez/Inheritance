@@ -43,8 +43,8 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 |                   | Public Derivation | Private Derivation | Protected Derivation |
 | ----------------- | ----------------- | :----------------: | :------------------: |
 | Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
-| Protected members | Protected         |      Private       |      Protected       |
-| Public members    | Public            |      Private       |      Protected       |
+| Protected members | Protected✅        |      Private⛔️      |      Protected✅      |
+| Public members    | Public✅           |      Private⛔️      |      Protected✅      |
 
 * Public Visibility Mode ``` public ```: Public members of the base class becomes Public members of the derived class
 * Private Visibility Mode ```private ```: Public members of the base class become private members of the derived class
