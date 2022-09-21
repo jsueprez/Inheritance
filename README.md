@@ -111,7 +111,7 @@ We encourage public contributions! Please review [CONTRIBUTING.md](docs/CONTRIBU
 **[Back to top](#table-of-contents)**
 
 ## Further Reading
-[```friend ``` modifier] (https://isocpp.org/wiki/faq/friends)
+[```friend ``` modifier](https://isocpp.org/wiki/faq/friends)
 
 **[Back to top](#table-of-contents)**
 
