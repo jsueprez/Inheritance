@@ -8,7 +8,7 @@ This project is shows off concepts about one fundamental principle of the OOP, t
   - [About the Project](#about-the-project)
     - [INHERITANCE](#inheritance-1)
     - [ACCESS MODIFIER](#access-modifier)
-    - [CONSTRUCTORS & DESTRUCTOR](#constructors--destructor)
+    - [CONSTRUCTOR & DESTRUCTOR](#constructor--destructor)
     - [SPECIAL SYNTAX](#special-syntax)
   - [Project Status](#project-status)
   - [Getting Started](#getting-started)
@@ -44,12 +44,12 @@ This project is shows off concepts about one fundamental principle of the OOP, t
 | ----------------- | ----------------- | :----------------: | :------------------: |
 | Private members   | Not Inherited     |   Not Inherited    |    Not Inherited     |
 | Protected members | Protected✅        |      Private⛔️      |      Protected✅      |
-| Public members    | Public✅           |      Private⛔️      |      Protected✅      |
+| Public members    | Public            |      Private⛔️      |      Protected✅      |
 
-NOTE: ✅ Can be accessed in the derived class
-      ⛔️ Can NOT be accessed in the derived class
+NOTE: ✅ Can only be accessed within the derived class.
+      ⛔️ Can NOT be accessed neither in the derived class nor outside of the class.
 
-### CONSTRUCTORS & DESTRUCTOR
+### CONSTRUCTOR & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
 * If there are one or more arguments in the base class constructor, derived class need to pass argument to the base class constructor
 * Use the colon ":" after the name class declaration to indicate inheritance.
