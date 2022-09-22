@@ -26,7 +26,7 @@ This project shows off concepts about one fundamental principle of the OOP, the 
 * In the derived class you should list only additional member variables and functions, no need to repeat things from base class, only things that you are adding or overriding.
 * Use the colon ":" after the name class declaration to indicate inheritance.
 ### ACCESS MODIFIER
-[Example](src/module/AccesModifier_VisibilityMode.cpp)
+[Example](src/module/AccesModifier_VisibilityMode.h)
 * Base classes can be inherited by derived classes using 3 types of visibility,  ```private ```, ``` public ``` and ``` protected ```.
 * By default, if you don't specify the visibility after the ``` : ```, the base class is inherited in private mode.
 
@@ -51,7 +51,7 @@ NOTE:
 There are different types of inheritance in C++
 
 #### Single Inheritance
-[Example]
+[Example](src/module/singleInheritance.h)
 A derived class is inherited with only one base class.
 
 Key Takeaways:
