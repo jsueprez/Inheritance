@@ -1,24 +1,37 @@
 #include <iostream>
-#include <HybridCalculator.h>
+#include "singleInheritance.h"
+#include "accessModifier_VisibilityMode.h"
 
-/*
-Create 2 classes:
-    1. SimpleCalculator - Takes input of 2 numbers using a utility function and performs +, -, *, / and displays the results using another function.
-    2. ScientificCalculator - Takes input of 2 numbers using a utility function and performs any four scientific operations of your choice and displays the results using another function.
-
-    Create another class HybridCalculator and inherit it using these 2 classes:
-    Q1. What type of Inheritance are you using?
-        Multiple Inheritance
-    Q2. Which mode of Inheritance are you using?
-        SimpleCalculator and ScientificCalculator
-    Q3. Create an object of HybridCalculator and display results of the simple and scientific calculator.
-    Q4. How is code reusability implemented?
-*/
 int main()
 {
-    HybridCalculator calcHyb(1,2);
-    calcHyb.print_results_scientific();
-    calcHyb.print_results_simple();
+    // Single inheritance
+    BasicCalculator basicCalc(2, 2);
+    basicCalc.print_results();
+
+    CasioCalculator casioCal(5, 2);
+    casioCal.print_results();
+
+    std::cout << std::endl
+              << std::endl;
+    // Access modifiers on Inheritance
+    baseClass bClass;
+    derivingPublicModeClass publicMode;
+    derivingPrivateModeClass privateMode;
+    derivingProtectedMode protectedMode;
+
+    bClass.print_rules();
+    bClass.z = 3;
+    std::cout << "Only 'z' can be accesed by the bClass, z=" << bClass.z << std::endl;
+
+    publicMode.print_rules();
+    publicMode.z = 5;
+    std::cout << publicMode.z << std::endl;
+
+    privateMode.print_rules();
+    // privateMode.z = 10; --> private member inaccesible
+
+    protectedMode.print_rules();
+    // protectedMode.z = 10; --> private member inaccesible
 
     return 0;
 }

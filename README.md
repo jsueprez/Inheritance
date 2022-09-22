@@ -9,7 +9,6 @@ This project shows off concepts about one fundamental principle of the OOP, the 
     - [INHERITANCE](#inheritance-1)
     - [ACCESS MODIFIER](#access-modifier)
     - [CONSTRUCTOR & DESTRUCTOR](#constructor--destructor)
-    - [SPECIAL SYNTAX](#special-syntax)
       - [Single Inheritance](#single-inheritance)
       - [Multiple Inheritance](#multiple-inheritance)
   - [Contributing](#contributing)
@@ -25,7 +24,9 @@ This project shows off concepts about one fundamental principle of the OOP, the 
 * We can reuse the properties of an existing class by inheriting it
 * The new class which is inherited from the base class is called a derived class
 * In the derived class you should list only additional member variables and functions, no need to repeat things from base class, only things that you are adding or overriding.
+* Use the colon ":" after the name class declaration to indicate inheritance.
 ### ACCESS MODIFIER
+[Example](src/module/AccesModifier_VisibilityMode.cpp)
 * Base classes can be inherited by derived classes using 3 types of visibility,  ```private ```, ``` public ``` and ``` protected ```.
 * By default, if you don't specify the visibility after the ``` : ```, the base class is inherited in private mode.
 
@@ -40,92 +41,17 @@ NOTE:
 * A member (either data member or member function) declared in a ```protected``` section of a class can only be accessed by member functions and friends of that class, and by member functions and friends of derived classes
 * A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone
 
-``` C++
-#include <iostream>
-class baseClass
-{
-private:
-    int x;
-protected:
-    int y;
-public:
-    int z;
-    void print_rules()
-    {
-        std::cout << "None of the derived classes can access anything that is private in the baseClass." << std::endl;
-    }
-};
-
-class derivingPublicModeClass : public baseClass
-{
-public:
-    void print_rules()
-    {
-        std::cout << "In derivingPublicModeClass, the public part of the baseClass is public, the protected part of the baseClass is protected, we say derivingPublicModeClass is-a-kind-of-a classBase. " << std::endl;
-    }
-};
-
-class derivingPrivateModeClass : private baseClass
-{
-public:
-    void print_rules()
-    {
-        std::cout << "In derivingPrivateModeClass, the public part and the protected part of the baseClass are private. " << std::endl;
-    }
-};
-
-class derivingProtectedMode : protected baseClass
-{
-public:
-    void print_rules()
-    {
-        std::cout << "In derivingProtectedMode, the public part and the protected part of the baseClass are protected. " << std::endl;
-    }
-};
-
-int main()
-{
-    baseClass bClass;
-    derivingPublicModeClass publicMode;
-    derivingPrivateModeClass privateMode;
-    derivingProtectedMode protectedMode;
-
-    bClass.print_rules();
-    bClass.z = 3;
-    std::cout << "Only 'z' can be accesed by the bClass, z=" << bClass.z << std::endl;
-
-    publicMode.print_rules();
-    publicMode.z = 5;
-    std::cout << publicMode.z << std::endl;
-
-    privateMode.print_rules();
-    // privateMode.z = 10; --> private member inaccesible
-
-    protectedMode.print_rules();
-    // protectedMode.z = 10; --> private member inaccesible
-}
-```
 
 ### CONSTRUCTOR & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
 * If there are one or more arguments in the base class constructor, derived class need to pass argument to the base class constructor
-* Use the colon ":" after the name class declaration to indicate inheritance.
 * If both base and derived classes have constructors, base class constructor is executed first. The opposite happens with the destructor, they are called from inner to outer.
 * In multiple inheritance, base classes are constructed in the order in which they appear in the class deceleration. For example if there are three classes “A”, “B”, and “C”, and the class “C” is inheriting classes “A” and “B”,then the constructor of class “A” will be executed first. But if the class “B” is written before class “A” then the constructor of class “B” will be executed first.
-### SPECIAL SYNTAX
-* C++ supports a special syntax for passing arguments to multiple base classes
-* The constructor of the derived class receives all the arguments at once and then will pass the call to the respective base classes
-* The body is called after the constructors is finished executing
-``` C++
- Derived-Constructor (arg1, arg2, arg3….): Base 1-Constructor (arg1,arg2), Base 2-Constructor(arg3,arg4)
-{
-  
-}
-```
 
 There are different types of inheritance in C++
 
 #### Single Inheritance
+[Example]
 A derived class is inherited with only one base class.
 
 Key Takeaways:

@@ -15,14 +15,12 @@ set(CMAKE_CXX_EXTENSIONS ON)
 # Definition of the source/headers files
 ######################################################################################
 set(CORE_SOURCE
-    src/module/simplecalculator.cpp
-    src/module/scientificcalculator.cpp
+    src/main.cpp
 )
 
 set(CORE_HEADERS
-    src/module/simplecalculator.h
-    src/module/scientificcalculator.h
-    src/module/hybridCalculator.h
+    src/module/accessModifier_VisibilityMode.h
+    src/module/singleInheritance.h
 )
 
 file(GLOB TEST_SOURCE
