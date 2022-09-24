@@ -15,7 +15,10 @@ set(CMAKE_CXX_EXTENSIONS ON)
 # Definition of the source/headers files
 ######################################################################################
 set(CORE_SOURCE
-    src/main.cpp
+    src/module/game/creature.cpp
+    src/module/game/player.cpp
+    src/module/game/monster.cpp
+    src/module/game/run.cpp
 )
 
 set(CORE_HEADERS
@@ -23,7 +26,10 @@ set(CORE_HEADERS
     src/module/singleInheritance.h
     src/module/singleInheritance_1.h
     src/module/singleInheritance_2.h
-    src/module/singleInheritance_3.h
+    src/module/game/creature.h
+    src/module/game/player.h
+    src/module/game/monster.h
+    src/module/game/run.h
 )
 
 file(GLOB TEST_SOURCE
