@@ -1,5 +1,6 @@
 #include <iostream>
 #include "singleInheritance.h"
+#include "singleInheritance_1.h"
 #include "accessModifier_VisibilityMode.h"
 
 int main()
@@ -32,6 +33,15 @@ int main()
 
     protectedMode.print_rules();
     // protectedMode.z = 10; --> private member inaccesible
+
+    std::cout << std::endl
+              << std::endl;
+
+    const Apple a{ "Red delicious", "red", 4.2 };
+    std::cout << a << std::endl;
+
+    const Banana b{ "Cavendish", "yellow" };
+    std::cout << b << '\n';
 
     return 0;
 }
