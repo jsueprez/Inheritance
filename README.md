@@ -40,7 +40,10 @@ This project shows off concepts about one fundamental principle of the OOP, the 
 NOTE: 
 * A member (either data member or member function) declared in a ```private``` section of a class can only be accessed by member functions and friends of that class.
 * A member (either data member or member function) declared in a ```protected``` section of a class can only be accessed by member functions and friends of that class, and by member functions and friends of derived classes
-* A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone
+* A member (either data member or member function) declared in a ```public``` section of a class can be accessed by anyone.
+* ```protected``` access modifier is most useful when you are your team are going to be the one deriving your own clases and the number of derived classes is reasonable, since when there is a change in the protected member(thetyep, what the value means, etc) of the base class, you will probably need to change both the base class and all the derived classes.  
+* Best practice *Favor private members over protected members.*
+* Best practice *Use public inheritance unless you have a specific reason to do otherwise.*
 
 ### CONSTRUCTOR & DESTRUCTOR
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
@@ -55,7 +58,11 @@ There are different types of inheritance in C++
 A derived class is inherited with only one base class.
 #### Multiple Inheritance
 [Example](src/module/multipleInheritance.h)
-A derived class is inherited with more than one base class
+A derived class is inherited with more than one base class.
+* Multiple inheritance adds complexity.
+* Ambiguity can result when multiple base classes contain a function with the same name. --> (Workaround using scoping)
+* The Diamond problme, this occurs when a class multiply inherits from two classes which each inherit from a single base class. -->(Solved with virtual base classes)
+* Best practice *Avoid multiple inheritance unless alternatives lead to more complexity.*
     Hierarchical Inheritance
     Multilevel Inheritance
     Hybrid Inheritance

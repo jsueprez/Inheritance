@@ -22,6 +22,8 @@ set(CORE_HEADERS
     src/module/accessModifier_VisibilityMode.h
     src/module/singleInheritance.h
     src/module/singleInheritance_1.h
+    src/module/singleInheritance_2.h
+    src/module/singleInheritance_3.h
 )
 
 file(GLOB TEST_SOURCE
