@@ -19,6 +19,15 @@ set(CORE_SOURCE
     src/module/game/player.cpp
     src/module/game/monster.cpp
     src/module/game/run.cpp
+    src/module/animal/animal.cpp
+    src/module/animal/dog.cpp
+    src/module/animal/cat.cpp
+    src/module/animal/test_animal.cpp
+    src/module/forms/shape.cpp
+    src/module/forms/triangle.cpp
+    src/module/forms/circle.cpp
+    src/module/forms/point.cpp
+    src/module/forms/test_forms.cpp
 )
 
 set(CORE_HEADERS
@@ -29,6 +38,13 @@ set(CORE_HEADERS
     src/module/game/creature.h
     src/module/game/player.h
     src/module/game/monster.h
+    src/module/animal/animal.h
+    src/module/animal/dog.h
+    src/module/animal/cat.h
+    src/module/forms/shape.h
+    src/module/forms/triangle.h
+    src/module/forms/circle.h
+    src/module/forms/point.h
 )
 
 file(GLOB TEST_SOURCE

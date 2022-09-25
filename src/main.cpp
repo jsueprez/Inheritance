@@ -5,9 +5,11 @@
 #include "accessModifier_VisibilityMode.h"
 
 /* functions has external linkage by default,
- * so I can use this function defined in creature.cpp
+ * so I can use this function defined in other files
  * just placing a forward declaration */
 void playGame();
+void test_animal();
+void test_form();
 
 int main()
 {
@@ -63,7 +65,27 @@ int main()
     std::cout << std::endl
               << std::endl;
 
-    playGame();
+    std::cout << "Choose which to run Game(g), Animal(a): ";
+    char answer{};
+    std::cin >> answer;
+
+    switch(answer)
+    {
+    case 'g':
+        playGame();
+        break;
+
+    case 'a':
+        test_animal();
+        break;
+
+    case 'f':
+        test_form();
+        break;
+
+    default:
+        std::cout << "Not valid answer.\n";
+    }
 
     return 0;
 }
