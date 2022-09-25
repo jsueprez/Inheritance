@@ -1,13 +1,7 @@
-#include "run.h"
 #include "monster.h"
 #include "player.h"
 
-int getRandomNumber1(int min, int max)
-{
-    static constexpr double fraction{ 1.0 / (RAND_MAX + 1.0) }; // static used for efficiency, so we only calculate this value once
-    // evenly distribute the random number across our range
-    return min + static_cast<int>((max - min + 1) * (std::rand() * fraction));
-}
+int getRandomNumber(int min, int max);
 
 static void attackMonster(Monster& m, Player& p)
 {
@@ -38,7 +32,7 @@ static void fightMonster(Player& p)
     {
     case 'r':
     case 'R':
-        if(getRandomNumber1(1, 2) == 1)
+        if(getRandomNumber(1, 2) == 1)
         {
             std::cout << "You failed to flee." << std::endl;
             attackPlayer(m,p);
@@ -72,7 +66,7 @@ static void fightMonster(Player& p)
     }
 }
 
-void Run::playGame()
+void playGame()
 {
     std::string name;
     std::cout << "Enter your name: ";

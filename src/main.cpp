@@ -2,9 +2,12 @@
 #include "singleInheritance.h"
 #include "singleInheritance_1.h"
 #include "singleInheritance_2.h"
-#include "module/game/run.h"
 #include "accessModifier_VisibilityMode.h"
 
+/* functions has external linkage by default,
+ * so I can use this function defined in creature.cpp
+ * just placing a forward declaration */
+void playGame();
 
 int main()
 {
@@ -60,8 +63,7 @@ int main()
     std::cout << std::endl
               << std::endl;
 
-    Run r;
-    r.playGame();
+    playGame();
 
     return 0;
 }

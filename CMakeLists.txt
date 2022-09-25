@@ -29,7 +29,6 @@ set(CORE_HEADERS
     src/module/game/creature.h
     src/module/game/player.h
     src/module/game/monster.h
-    src/module/game/run.h
 )
 
 file(GLOB TEST_SOURCE
