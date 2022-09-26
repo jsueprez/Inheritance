@@ -25,7 +25,7 @@ This project shows off concepts about one fundamental principle of the OOP, the 
 * The new class which is inherited from the base class is called a derived class
 * In the derived class you should list only additional member variables and functions, no need to repeat things from base class, only things that you are adding or overriding.
 * Use the colon ":" after the name class declaration to indicate inheritance.
-* Inheritance models an "is-a" relationship between two objects, diffrent that object-composition which models a "has-a" relationship.
+* Inheritance models an "is-a" relationship between two objects, diffrent than object-composition which models a "has-a" relationship.
 ### ACCESS MODIFIER
 [Example](src/module/AccesModifier_VisibilityMode.h)
 * Base classes can be inherited by derived classes using 3 types of visibility,  ```private ```, ``` public ``` and ``` protected ```.
@@ -49,7 +49,7 @@ NOTE:
 * If the base class constructor does not have any arguments, there is no need for any constructor in the derived class
 * If there are one or more arguments in the base class constructor, derived class need to pass argument to the base class constructor
 * If both base and derived classes have constructors, base class constructor is executed first. The opposite happens with the destructor, they are called from inner to outer.
-* In multiple inheritance, base classes are constructed in the order in which they appear in the class deceleration. For example if there are three classes “A”, “B”, and “C”, and the class “C” is inheriting classes “A” and “B”,then the constructor of class “A” will be executed first. But if the class “B” is written before class “A” then the constructor of class “B” will be executed first.
+* In multiple inheritance, base classes are constructed in the order in which they appear in the class declaration. For example if there are three classes “A”, “B”, and “C”, and the class “C” is inheriting classes “A” and “B”,then the constructor of class “A” will be executed first. But if the class “B” is written before class “A” then the constructor of class “B” will be executed first.
 
 There are different types of inheritance in C++
 
@@ -61,23 +61,14 @@ A derived class is inherited with only one base class.
 A derived class is inherited with more than one base class.
 * Multiple inheritance adds complexity.
 * Ambiguity can result when multiple base classes contain a function with the same name. --> (Workaround using scoping)
-* The Diamond problme, this occurs when a class multiply inherits from two classes which each inherit from a single base class. -->(Solved with virtual base classes)
+* The Diamond problem, this occurs when a class multiply inherits from two classes which each inherit from a single base class. -->(Solved with virtual base classes)
 * Best practice *Avoid multiple inheritance unless alternatives lead to more complexity.*
-    Hierarchical Inheritance
-    Multilevel Inheritance
-    Hybrid Inheritance
-
-**[Back to top](#table-of-contents)**
-## Contributing
-
-Provide details about how people can contribute to your project. If you have a contributing guide, mention it here. e.g.:
-
-We encourage public contributions! Please review [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on our code of conduct and development process.
 
 **[Back to top](#table-of-contents)**
 
 ## Further Reading
 ```friend ``` [modifier](https://isocpp.org/wiki/faq/friends)
+[Polymorphism](https://www.learncpp.com/cpp-tutorial/virtual-functions/)
 
 **[Back to top](#table-of-contents)**
 
@@ -92,13 +83,5 @@ This project is licensed under the XXXXXX License - see [LICENSE.md](LICENSE.md)
 ## Authors
 
 * **[Antonio Perez](https://github.com/jsueprez)** - *Initial work* -
-
-Also see the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-**[Back to top](#table-of-contents)**
-
-## Acknowledgments
-
-Provide proper credits, shout-outs, and honorable mentions here. Also provide links to relevant repositories, blog posts, or contributors worth mentioning.
 
 **[Back to top](#table-of-contents)**
