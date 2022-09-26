@@ -22,12 +22,7 @@ set(CORE_SOURCE
     src/module/animal/animal.cpp
     src/module/animal/dog.cpp
     src/module/animal/cat.cpp
-    src/module/animal/test_animal.cpp
-    src/module/forms/shape.cpp
-    src/module/forms/triangle.cpp
-    src/module/forms/circle.cpp
-    src/module/forms/point.cpp
-    src/module/forms/test_forms.cpp
+    src/module/animal/test_animal.cpp    
 )
 
 set(CORE_HEADERS
@@ -41,10 +36,6 @@ set(CORE_HEADERS
     src/module/animal/animal.h
     src/module/animal/dog.h
     src/module/animal/cat.h
-    src/module/forms/shape.h
-    src/module/forms/triangle.h
-    src/module/forms/circle.h
-    src/module/forms/point.h
 )
 
 file(GLOB TEST_SOURCE

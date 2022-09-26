@@ -9,7 +9,6 @@
  * just placing a forward declaration */
 void playGame();
 void test_animal();
-void test_form();
 
 int main()
 {
@@ -45,16 +44,16 @@ int main()
     std::cout << std::endl
               << std::endl;
 
-    const Apple a{ "Red delicious", "red", 4.2 };
+    const Apple a{"Red delicious", "red", 4.2};
     std::cout << a << std::endl;
 
-    const Banana b{ "Cavendish", "yellow" };
+    const Banana b{"Cavendish", "yellow"};
     std::cout << b << '\n';
 
     std::cout << std::endl
               << std::endl;
 
-    Manzana m{ "roja" };
+    Manzana m{"roja"};
     Platano p;
     GrannySmith c;
 
@@ -69,7 +68,7 @@ int main()
     char answer{};
     std::cin >> answer;
 
-    switch(answer)
+    switch (answer)
     {
     case 'g':
         playGame();
@@ -79,17 +78,9 @@ int main()
         test_animal();
         break;
 
-    case 'f':
-        test_form();
-        break;
-
     default:
         std::cout << "Not valid answer.\n";
     }
 
     return 0;
 }
-
-
-
-
